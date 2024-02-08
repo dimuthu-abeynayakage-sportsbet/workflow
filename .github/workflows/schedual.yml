@@ -7,4 +7,4 @@ jobs:
   stale:
     runs-on: ubuntu-latest
     steps:
-      - run: Testing
+      - run: echo "Testing"
