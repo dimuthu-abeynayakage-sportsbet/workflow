@@ -7,7 +7,7 @@ jobs:
   find_available_prs:
     runs-on: ubuntu-latest
     steps:
-        - name: list all closed pull requests in last 24 hours
+        - name: list all closed pull requests in last 24 hours1
           id: list
           uses: actions/github-list-pull-requests@v1.0
           with:
