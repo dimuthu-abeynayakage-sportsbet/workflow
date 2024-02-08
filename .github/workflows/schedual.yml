@@ -1,19 +1,10 @@
-name: "Workflow example"
+name: "Close stale issues"
 on:
   schedule:
-    - cron: '*/1 * * * *'
-    
+  - cron: "*/1 * * * *"
+
 jobs:
-  find_available_prs:
-    name: Test Workflow
+  stale:
     runs-on: ubuntu-latest
     steps:
-        - name: list all closed pull requests in last 24 hours1
-          id: list
-          uses: actions/github-list-pull-requests@v1.0
-          with:
-            token: ${{secrets.GITHUB_TOKEN}}
-            state: 'closed'
-            window: '24'
-        - name: output
-          run: echo '${{ steps.list.outputs.pullRequestNumbers }}'
+      - name: list all closed pull requests in last 24 hours1
