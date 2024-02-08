@@ -2,9 +2,9 @@ name: "Workflow example"
 on:
   schedule:
     - cron: '*/1 * * * *'
+    
 jobs:
   testJob:
-    name: "Say hello"
     runs-on: ubuntu-latest
     steps:
         - name: list all closed pull requests in last 24 hours
